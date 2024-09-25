@@ -90,3 +90,18 @@ body {
     font-size: 30px;
     font-weight: 700;
 }
+ @media screen and (max-width: 700px) {
+    .playing-field {
+        width: 80%;
+    }
+    .img-rock-paper-scissors {
+        width: 25%;
+    }
+    .result-div {
+        height: 200px;
+    } 
+    #result-of-game {
+        font-size: 22px;
+        font-weight: 700;
+    }
+ }
