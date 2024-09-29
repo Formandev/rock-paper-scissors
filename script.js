@@ -86,14 +86,17 @@ btnPlay.addEventListener('click', () => {
     resultWindow.textContent = result;
     btnRestart.style.display = "block";
     blurBack.style.display = "block";
-});
 
-btnRestart.addEventListener('click', () => {
+    btnRestart.addEventListener('click', () => {
     resultWindow.innerHTML = '';
     clearComputerChoice();
     btnRestart.style.display = "none";
     blurBack.style.display = "none";
     userImg.setAttribute('src', '');
+    userChoice = 0;
 })
+});
+
+
 
 
