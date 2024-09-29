@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="./img/240-2404398_hand-of-stop-pixel-rock-paper-scissors-hd.png">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="./img/240-2404398_hand-of-stop-pixel-rock-paper-scissors-hd.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Чувачі</title>
-</head>
-<body>
+  </head>
+  <body class="body-back">
+    <div class="blur-background"></div>
+
     <h1>Rock paper scissors</h1>
     <div class="playing-field">
-        <div class="result-div">
-            <div class="user-field"><img src="" class="img-rock-paper-scissors user-img"></div>
-            <div class="computer-field"><img src="" class="img-rock-paper-scissors computer-img"></div>
-            <p id="result-of-game"></p>
+      <div class="result-div">
+        <div class="user-field">
+          <img src="" class="img-rock-paper-scissors user-img" />
         </div>
-        <div class="user-choice">
-            <button id="rock" value="rock" onclick="displayRock(event)">rock</button>
-            <button id="paper" value="paper" onclick="displayPaper(event)">paper</button>
-            <button id="scissors" value="scissors" onclick="displayScissors(event)">scissors</button>
+        <div class="computer-field">
+          <img src="" class="img-rock-paper-scissors computer-img" />
         </div>
-        <button id="lets-play" onclick="computerChoice()">Play!</button>
+        <p id="result-of-game"></p>
+        <button id="restart-btn">Restart the game!</button>
+      </div>
+      <div class="user-choice">
+        <button id="rock" value="rock" onclick="displayRock(event)">
+          rock
+        </button>
+        <button id="paper" value="paper" onclick="displayPaper(event)">
+          paper
+        </button>
+        <button id="scissors" value="scissors" onclick="displayScissors(event)">
+          scissors
+        </button>
+      </div>
+      <button id="lets-play" onclick="computerChoice()">Play!</button>
     </div>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

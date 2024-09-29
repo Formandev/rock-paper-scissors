@@ -2,6 +2,8 @@ const btnRock = document.getElementById("rock");
 const btnPaper = document.getElementById("paper");
 const btnScissors = document.getElementById("scissors");
 const btnPlay = document.getElementById("lets-play");
+const btnRestart = document.getElementById("restart-btn");
+const blurBack = document.querySelector(".blur-background")
 
 const resultWindow = document.getElementById("result-of-game")
 
@@ -73,7 +75,25 @@ function determinationWinner(user, computer) {
 }
 
 btnPlay.addEventListener('click', () => {
+
+    if (!userChoice) {
+        resultWindow.textContent = "Please make a choice!";
+        return;
+    }
+
     const computerChoiceResult = displayComputerChoice();
     const result = determinationWinner(userChoice, computerChoiceResult);
     resultWindow.textContent = result;
+    btnRestart.style.display = "block";
+    blurBack.style.display = "block";
 });
+
+btnRestart.addEventListener('click', () => {
+    resultWindow.innerHTML = '';
+    clearComputerChoice();
+    btnRestart.style.display = "none";
+    blurBack.style.display = "none";
+    userImg.setAttribute('src', '');
+})
+
+
